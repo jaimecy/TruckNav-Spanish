@@ -24,7 +24,7 @@ Fork de [TruckNav-Sim](https://github.com/Rares-Muntean/TruckNav-Sim) con la int
 
 ### Escritorio (Windows)
 
-1. Descarga **[TruckNav-Setup-0.5.0.exe](https://github.com/jaimecy/TruckNav-Spanish/releases/download/v0.5.0-es/TruckNav-Setup-0.5.0.exe)** desde las [Releases](https://github.com/jaimecy/TruckNav-Spanish/releases/tag/v0.5.0-es).
+1. Descarga **[TruckNav-Setup-spanish-0.5.0.exe](https://github.com/jaimecy/TruckNav-Spanish/releases/download/v0.5.0-es/TruckNav-Setup-spanish-0.5.0.exe)** desde las [Releases](https://github.com/jaimecy/TruckNav-Spanish/releases/tag/v0.5.0-es).
 2. Ejecútalo y extrae los archivos en una carpeta.
 3. Abre **TruckNav.exe** (o `Abrir TruckNav.bat`). La interfaz sale en español.
 4. Si usas tablet o móvil, instala el APK y escribe la IP que muestra la aplicación de PC.
