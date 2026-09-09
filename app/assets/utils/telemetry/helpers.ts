@@ -47,7 +47,18 @@ export function getTruckState(
     };
 }
 
-export function getGameState(data: TelemetryPacket) {
+const WEEKDAY_SHORT: Record<string, readonly string[]> = {
+    es: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
+    en: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    de: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
+    nl: ["Zo", "Ma", "Di", "Wo", "Do", "Vr", "Za"],
+    cs: ["Ne", "Po", "Út", "St", "Čt", "Pá", "So"],
+    sk: ["Ne", "Po", "Ut", "St", "Št", "Pi", "So"],
+    ro: ["Dum", "Lun", "Mar", "Mie", "Joi", "Vin", "Sâm"],
+    ko: ["일", "월", "화", "수", "목", "금", "토"],
+};
+
+export function getGameState(data: TelemetryPacket, locale = "es") {
     const name = data.game.toLowerCase();
     const gameConnected = name === "ets2" || name === "ats";
 
@@ -57,7 +68,8 @@ export function getGameState(data: TelemetryPacket) {
         data.navigation.distance > 100 && data.job.income === 0;
 
     const { formatted, raw } = convertTelemtryTime(data.common.gameTime);
-    const day = raw.toUTCString().slice(0, 3);
+    const weekdays = WEEKDAY_SHORT[locale] ?? WEEKDAY_SHORT.es;
+    const day = weekdays[raw.getUTCDay()];
     const gameTime = `${day} ${formatted}`;
 
     return {

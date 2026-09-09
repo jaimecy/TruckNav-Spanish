@@ -139,7 +139,7 @@ export function useEtsTelemetry() {
         onUpdate?: (data: TelemetryUpdate) => void,
     ) {
         const { gameConnected, hasInGameMarker, gameTime, scale } =
-            getGameState(data);
+            getGameState(data, settings.value.locale);
 
         Object.assign(gameState, {
             gameTime: gameTime,
