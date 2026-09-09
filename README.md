@@ -1,3 +1,30 @@
+# Truck Nav (español)
+
+Fork de [TruckNav-Sim](https://github.com/Rares-Muntean/TruckNav-Sim) con la interfaz en **español** por defecto.
+
+## Instalar en español
+
+### Opción A — Parche para TruckNav ya instalado (recomendado)
+
+1. Instala TruckNav desde las [releases oficiales](https://github.com/Rares-Muntean/TruckNav-Sim/releases).
+2. Descarga **[TruckNav-Español.exe](installer/TruckNav-Español.exe)** desde la carpeta `installer` de este repositorio.
+3. Ejecuta el parche (pide permisos de administrador).
+4. Si no encuentra la carpeta, elige `TruckNav.exe` a mano.
+5. Abre TruckNav. Si sigue en inglés: **Ajustes → Idioma → Español**.
+
+### Opción B — Desde el código (Git + Node.js)
+
+```bash
+git clone https://github.com/jaimecy/TruckNav-Spanish.git
+cd TruckNav-Spanish
+npm install
+npx nuxi dev --host 0.0.0.0
+```
+
+Abre el enlace de red que muestre la terminal (`http://192.168.x.x:3000/`). El idioma por defecto es español.
+
+---
+
 # Truck Nav
 
 **Truck Nav** is an external GPS navigation system for Euro Truck Simulator 2 and American Truck Siulator built using Typescript. It runs as an APK, EXE or browser (perfect for a phone, tablet or second monitor) and provides real-time tracking and routing based on the in-game map.
@@ -72,8 +99,8 @@ You can either clone the repository using Git (recommended for easy updates) or 
 **Option A: Git Clone (Recommended)**
 Open your terminal or command prompt and run:
 ```bash
-git clone https://github.com/Rares-Muntean/TruckNav-Sim.git
-cd TruckNav-Sim
+git clone https://github.com/jaimecy/TruckNav-Spanish.git
+cd TruckNav-Spanish
 ```
 **Option B: Download ZIP**
 1. Click the Code button at the top of this page and select `Download ZIP`.
