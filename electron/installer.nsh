@@ -1,3 +1,11 @@
+!macro customHeader
+  !ifndef BUILD_UNINSTALLER
+    Caption "TruckNavSpanish"
+  !else
+    UninstallCaption "TruckNavSpanish"
+  !endif
+!macroend
+
 !macro preInit
   SetRegView 64
   WriteRegExpandStr HKLM "${INSTALL_REGISTRY_KEY}" InstallLocation "$PROGRAMFILES64\TruckNavSpanish"

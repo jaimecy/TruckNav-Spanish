@@ -19,8 +19,8 @@
 
 .speed-limit-sign {
     position: absolute;
-    bottom: 25px;
-    left: 22px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    left: 12px;
     transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
     background-color: $white-font-text;
@@ -28,7 +28,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 25px;
 
     &.circle {
         border: 5px solid $red-color;

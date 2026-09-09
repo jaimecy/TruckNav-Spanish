@@ -99,6 +99,11 @@ const {
 // Settings Controller
 const { activeSettings, settings } = useSettings();
 const { t } = useTranslations();
+const { kmToUserUnits, distanceUnit } = useUnitConversion();
+
+const routeDistanceConverted = computed(() =>
+    kmToUserUnits(routeDistance.value),
+);
 
 let uiTimer: ReturnType<typeof setTimeout> | null = null;
 let routeTimer: ReturnType<typeof setTimeout> | null = null;
@@ -660,6 +665,17 @@ const onCancelRoute = () => {
                             :text="t('common.gameOffline')"
                         />
                     </div>
+
+                    <Transition name="compact-slide">
+                        <CompactTrip
+                            v-if="isRouteActive && isSheetHidden"
+                            class="compact-trip-progress"
+                            :route-distance-converted="routeDistanceConverted"
+                            :distance-unit="distanceUnit"
+                            :route-eta="routeEta"
+                            @click="isSheetHidden = false"
+                        />
+                    </Transition>
 
                     <Transition name="sheet-slide" @after-leave="onSheetClosed">
                         <SheetSlide

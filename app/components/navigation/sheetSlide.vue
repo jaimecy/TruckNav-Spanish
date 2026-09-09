@@ -79,17 +79,6 @@ watch(
 <template>
     <div class="bottom-sheet" :class="{ 'is-hidden': isSheetHidden }">
         <div class="sheet-body">
-            <Transition name="compact-slide">
-                <CompactTrip
-                    v-if="isSheetHidden"
-                    v-on:click="onToggleSheetHidden"
-                    class="compact-trip-progress"
-                    :route-distance-converted="routeDistanceConverted"
-                    :distance-unit="distanceUnit"
-                    :route-eta="routeEta"
-                />
-            </Transition>
-
             <div class="sheet-content">
                 <div class="top-row">
                     <h2 class="dest-name">{{ destinationName }}</h2>
