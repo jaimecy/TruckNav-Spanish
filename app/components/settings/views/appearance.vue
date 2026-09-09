@@ -163,7 +163,7 @@ watch(() => activeSettings.value.themeColor, updatePreviewIcon, {
 
         <PreviewSetting :height="70">
             <p class="ui-font-preview">
-                90 km/h · 10.5 km {{ t("map.takeTheExit") }}
+                90 km/h · 10.5 km {{ t("directions.takeTheExit") }}
             </p>
         </PreviewSetting>
 
