@@ -28,7 +28,9 @@
         "differentialPackage": false,
         "artifactName": "TruckNav-Setup-spanish-${version}.${ext}",
         "installerIcon": "assets/TruckNavIconOutline.ico",
-        "uninstallerIcon": "assets/TruckNavIconOutline.ico"
+        "uninstallerIcon": "assets/TruckNavIconOutline.ico",
+        "shortcutName": "TruckNavSpanish",
+        "uninstallDisplayName": "TruckNavSpanish ${version}"
     },
     "win": {
         "target": "nsis",
