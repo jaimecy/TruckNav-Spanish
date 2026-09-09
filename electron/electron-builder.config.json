@@ -29,7 +29,8 @@
     },
     "win": {
         "target": "nsis",
-        "icon": "assets/TruckNavIconOutline.png"
+        "icon": "assets/TruckNavIconOutline.png",
+        "signAndEditExecutable": false
     },
     "mac": {
         "category": "your.app.category.type",

@@ -29,9 +29,6 @@ ets2-telemetry-server
 
 public/debug-roadnetwork/
 
-# Spanish patcher build artifacts
-tools/spanish-patcher/app.asar
-tools/spanish-patcher/extract/
-tools/spanish-patcher/bin/
-tools/spanish-patcher/obj/
-tools/spanish-patcher/dist/
+# Generated installers (too large for GitHub)
+installer/*.exe
+electron/dist/

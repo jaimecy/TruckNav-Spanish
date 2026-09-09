@@ -1,18 +1,27 @@
 # Truck Nav (español)
 
-Fork de [TruckNav-Sim](https://github.com/Rares-Muntean/TruckNav-Sim) con la interfaz en **español** por defecto.
+Fork de [TruckNav-Sim](https://github.com/Rares-Muntean/TruckNav-Sim) con la interfaz **ya en español**. No hace falta ningún parche ni un segundo ejecutable de traducción.
 
-## Instalar en español
+## Instalar
 
-### Opción A — Parche para TruckNav ya instalado (recomendado)
+### Escritorio (Windows)
 
-1. Instala TruckNav desde las [releases oficiales](https://github.com/Rares-Muntean/TruckNav-Sim/releases).
-2. Descarga **[TruckNav-Español.exe](installer/TruckNav-Español.exe)** desde la carpeta `installer` de este repositorio.
-3. Ejecuta el parche (pide permisos de administrador).
-4. Si no encuentra la carpeta, elige `TruckNav.exe` a mano.
-5. Abre TruckNav. Si sigue en inglés: **Ajustes → Idioma → Español**.
+El instalador completo se genera desde este mismo código:
 
-### Opción B — Desde el código (Git + Node.js)
+```bash
+git clone https://github.com/jaimecy/TruckNav-Spanish.git
+cd TruckNav-Spanish
+npm install
+npm run electron:make
+```
+
+Luego ejecuta:
+
+`electron/dist/TruckNav Setup 0.5.0.exe`
+
+Instala TruckNav como cualquier otro programa. Al abrirlo, sale en español.
+
+### Navegador / desarrollo
 
 ```bash
 git clone https://github.com/jaimecy/TruckNav-Spanish.git
@@ -21,7 +30,7 @@ npm install
 npx nuxi dev --host 0.0.0.0
 ```
 
-Abre el enlace de red que muestre la terminal (`http://192.168.x.x:3000/`). El idioma por defecto es español.
+Abre el enlace de red que muestre la terminal (`http://192.168.x.x:3000/`).
 
 ---
 
@@ -69,12 +78,9 @@ While the core navigation works, the project is far from perfect. Creating the r
 > **Real Company Name Mods:** If you use other mods that change company names other than the mod from **MLH82**, the navigation will likely fail or route incorrectly. The app is optimized for only vanilla and _**Real companies, gas station & billboards for ATS and ETS2**_ by **MLH82**.
 # Installation via .exe File
 
-1. Download the latest setup file from the
-  [Releases](https://github.com/Rares-Muntean/ets2-navigation-gps/releases) page.
-
-2. Run the downloaded setup file and complete the installation.
-
-3. Launch Truck Nav on your PC.
+1. Clone this repository and run `npm install` then `npm run electron:make`.
+2. Run `electron/dist/TruckNav Setup 0.5.0.exe` and complete the installation.
+3. Launch Truck Nav on your PC. The UI defaults to Spanish.
 
 4. Install the .apk file on your tablet or phone.
 
