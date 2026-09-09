@@ -10,6 +10,7 @@ import {
 } from "~/assets/utils/shared/colors";
 import { generateTruckIcon } from "~/assets/utils/map/markers";
 import { formatDirectionText } from "~/assets/utils/routing/directions";
+import { localizedMapTextField } from "~/assets/utils/map/localizedLabels";
 
 defineProps<{ goHome: () => void }>();
 
@@ -289,6 +290,27 @@ watch(
         textLayers.forEach((layerId) => {
             if (map.value!.getLayer(layerId)) {
                 map.value!.setLayoutProperty(layerId, "text-font", [newFont]);
+            }
+        });
+    },
+);
+
+watch(
+    () => settings.value.locale,
+    (locale) => {
+        if (!map.value) return;
+
+        const textLayers = [
+            "village-labels",
+            "city-labels",
+            "capital-major-labels",
+            "country-labels",
+        ];
+        const textField = localizedMapTextField(locale);
+
+        textLayers.forEach((layerId) => {
+            if (map.value!.getLayer(layerId)) {
+                map.value!.setLayoutProperty(layerId, "text-field", textField);
             }
         });
     },

@@ -60,7 +60,10 @@
         "externalRouteDetected": "Ruta externa detectada: definir waypoint",
         "followRoute": "Seguir ruta",
         "tappingDisabled": "Toques desactivados",
-        "tappingEnabled": "Toques activados"
+        "tappingEnabled": "Toques activados",
+        "nearLocation": "Cerca de {name}",
+        "openRoad": "Carretera",
+        "loadingLocation": "Cargando datos..."
     },
     "mobile": {
         "pairWithComputer": "Emparejar con el ordenador"

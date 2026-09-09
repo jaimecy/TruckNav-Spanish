@@ -6,7 +6,7 @@ import {
 } from "~/assets/utils/shared/colors";
 import { BlobSource } from "~/assets/utils/shared/BlobSource";
 import { getMapFileUrl } from "~/assets/utils/shared/fileManager";
-import { getActiveMapFolder } from "~/assets/utils/map/helpers";
+import { localizedMapTextField } from "~/assets/utils/map/localizedLabels";
 
 export async function initializeMap(
     container: HTMLElement,
@@ -316,7 +316,7 @@ export async function initializeMap(
             source: "all-data",
             "source-layer": "ets2villages",
             layout: {
-                "text-field": ["get", "name"],
+                "text-field": localizedMapTextField(settings.value.locale),
                 "text-font": [
                     activeSettings.value.fontFamily || "Commissioner",
                 ],
@@ -415,7 +415,7 @@ export async function initializeMap(
             "source-layer": "cities",
             filter: ["!=", ["get", "capital"], 2],
             layout: {
-                "text-field": ["get", "name"],
+                "text-field": localizedMapTextField(settings.value.locale),
                 "text-font": [
                     activeSettings.value.fontFamily || "Commissioner",
                 ],
@@ -443,7 +443,7 @@ export async function initializeMap(
             source: "all-data",
             "source-layer": "cities",
             layout: {
-                "text-field": ["get", "name"],
+                "text-field": localizedMapTextField(settings.value.locale),
                 "text-size": 18,
                 "text-font": [
                     activeSettings.value.fontFamily || "Commissioner",
@@ -469,7 +469,7 @@ export async function initializeMap(
             source: "all-data",
             "source-layer": "countrynames",
             layout: {
-                "text-field": ["get", "name"],
+                "text-field": localizedMapTextField(settings.value.locale),
                 "text-size": 20,
                 "text-font": [
                     activeSettings.value.fontFamily || "Commissioner",

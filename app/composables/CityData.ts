@@ -5,6 +5,10 @@ import {
 import { getActiveMapFolder } from "~/assets/utils/map/helpers";
 import { type WorkerCityArea } from "~/assets/utils/routing/algorithm";
 import { getMapFileUrl } from "~/assets/utils/shared/fileManager";
+import {
+    localizeCountryToken,
+    localizeMapName,
+} from "~/assets/utils/map/localizedLabels";
 
 // --- Types ---
 export interface ScsCityArea {
@@ -71,6 +75,7 @@ const isLoaded = ref(false);
 
 export function useCityData() {
     const { settings } = useSettings();
+    const { t, locale } = useTranslations();
 
     async function loadLocationData() {
         const folder = getActiveMapFolder(settings.value);
@@ -259,7 +264,7 @@ export function useCityData() {
     }
 
     function getGameLocationName(targetLng: number, targetLat: number): string {
-        if (!isLoaded.value) return "Loading data...";
+        if (!isLoaded.value) return t("map.loadingLocation");
 
         let bestName = "";
         let bestCountry = "";
@@ -278,8 +283,11 @@ export function useCityData() {
 
                 if (dist < minDistance) {
                     minDistance = dist;
-                    bestName = city.name;
-                    bestCountry = formatCountryToken(city.countryToken);
+                    bestName = localizeMapName(city.name, locale.value);
+                    bestCountry = localizeCountryToken(
+                        city.countryToken,
+                        locale.value,
+                    );
                 }
             }
         }
@@ -294,8 +302,14 @@ export function useCityData() {
 
                 if (dist < minDistance) {
                     minDistance = dist;
-                    bestName = feature.properties.name;
-                    bestCountry = feature.properties.state || "";
+                    bestName = localizeMapName(
+                        feature.properties.name,
+                        locale.value,
+                    );
+                    bestCountry = localizeCountryToken(
+                        feature.properties.state || "",
+                        locale.value,
+                    );
                 }
             }
         }
@@ -309,19 +323,12 @@ export function useCityData() {
 
             if (minDistance < threshold) {
                 return fullName;
-            } else {
-                return `Near ${fullName}`;
             }
+
+            return t("map.nearLocation").replace("{name}", fullName);
         }
 
-        return "Open Road";
-    }
-
-    function formatCountryToken(token?: string): string {
-        if (!token) return "";
-        return token
-            .replace(/_/g, " ")
-            .replace(/\b\w/g, (c) => c.toUpperCase());
+        return t("map.openRoad");
     }
 
     return {
