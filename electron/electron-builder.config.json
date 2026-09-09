@@ -24,6 +24,8 @@
         "perMachine": true,
         "allowElevation": true,
         "allowToChangeInstallationDirectory": true,
+        "differentialPackage": false,
+        "artifactName": "TruckNav-Setup-spanish-${version}.${ext}",
         "installerIcon": "assets/TruckNavIconOutline.ico",
         "uninstallerIcon": "assets/TruckNavIconOutline.ico"
     },
