@@ -27,7 +27,17 @@ Fork de [TruckNav-Sim](https://github.com/Rares-Muntean/TruckNav-Sim) con la int
 1. Descarga **[TruckNav-Setup-spanish-0.5.0.exe](https://github.com/jaimecy/TruckNav-Spanish/releases/download/v0.5.0-es/TruckNav-Setup-spanish-0.5.0.exe)** desde las [Releases](https://github.com/jaimecy/TruckNav-Spanish/releases/tag/v0.5.0-es).
 2. Ejecútalo y sigue el asistente de instalación. La carpeta por defecto es `TruckNavSpanish` (puedes cambiarla).
 3. Abre **TruckNav**. La interfaz sale en español.
-4. Si usas tablet o móvil, instala el APK y escribe la IP que muestra la aplicación de PC.
+
+### Android (tablet o móvil)
+
+1. Descarga **[TruckNav-spanish-0.5.0.apk](https://github.com/jaimecy/TruckNav-Spanish/releases/download/v0.5.0-es/TruckNav-spanish-0.5.0.apk)** desde las [Releases](https://github.com/jaimecy/TruckNav-Spanish/releases/tag/v0.5.0-es).
+2. Si ya tenías la APK oficial de TruckNav, desinstálala primero (si no, Android puede rechazar la instalación).
+3. Abre el archivo APK en el móvil y acepta instalar apps de orígenes desconocidos si te lo pide.
+4. Abre **TruckNav**. La interfaz sale en español.
+5. En el PC, deja TruckNav abierto y anota la IP que muestra (apartado **App**).
+6. En el móvil, escribe esa IP y conéctate. El PC y el móvil tienen que estar en la misma Wi‑Fi.
+
+Sin APK también puedes abrir en el navegador del móvil la dirección **Navegador** que muestra el programa de Windows (`IP:8628`). Esa página también está en español.
 
 ### Navegador / desarrollo (Node.js)
 

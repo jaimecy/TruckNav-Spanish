@@ -31,4 +31,5 @@ public/debug-roadnetwork/
 
 # Generated installers (too large for GitHub)
 installer/*.exe
+installer/*.apk
 electron/dist/
