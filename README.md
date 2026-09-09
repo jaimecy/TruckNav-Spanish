@@ -4,22 +4,15 @@ Fork de [TruckNav-Sim](https://github.com/Rares-Muntean/TruckNav-Sim) con la int
 
 ## Instalar
 
+## Instalar
+
 ### Escritorio (Windows)
 
-El instalador completo se genera desde este mismo código:
+1. Descarga el instalador desde las [Releases](https://github.com/jaimecy/TruckNav-Spanish/releases/tag/v0.5.0-es): **TruckNav-Setup-0.5.0.exe**.
+2. Ejecútalo y extrae los archivos en una carpeta.
+3. Abre **TruckNav.exe**. La interfaz sale en español.
 
-```bash
-git clone https://github.com/jaimecy/TruckNav-Spanish.git
-cd TruckNav-Spanish
-npm install
-npm run electron:make
-```
-
-Luego ejecuta:
-
-`electron/dist/TruckNav Setup 0.5.0.exe`
-
-Instala TruckNav como cualquier otro programa. Al abrirlo, sale en español.
+No instales el TruckNav oficial ni ningún parche: este instalador **ya es** el programa en español.
 
 ### Navegador / desarrollo
 
@@ -78,9 +71,10 @@ While the core navigation works, the project is far from perfect. Creating the r
 > **Real Company Name Mods:** If you use other mods that change company names other than the mod from **MLH82**, the navigation will likely fail or route incorrectly. The app is optimized for only vanilla and _**Real companies, gas station & billboards for ATS and ETS2**_ by **MLH82**.
 # Installation via .exe File
 
-1. Clone this repository and run `npm install` then `npm run electron:make`.
-2. Run `electron/dist/TruckNav Setup 0.5.0.exe` and complete the installation.
-3. Launch Truck Nav on your PC. The UI defaults to Spanish.
+1. Download **TruckNav-Setup-0.5.0.exe** from this fork's
+  [Releases](https://github.com/jaimecy/TruckNav-Spanish/releases/tag/v0.5.0-es) page.
+2. Run it and extract the files to a folder.
+3. Open **TruckNav.exe**. The UI defaults to Spanish.
 
 4. Install the .apk file on your tablet or phone.
 
