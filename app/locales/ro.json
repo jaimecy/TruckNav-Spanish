@@ -14,6 +14,8 @@
         "loadingRouteData": "Se încarcă datele rutei...",
         "missing": "Lipsește",
         "note": "Notă",
+        "warning": "Avertisment",
+        "caution": "Atenție",
         "offlineTryAgain": "Deconectat, încearcă să deschizi din nou",
         "reset": "Resetare",
         "resume": "Continuă",
@@ -31,6 +33,8 @@
         "localGps": "GPS Local",
         "minimize": "Minimizare",
         "plugin": "Plugin",
+        "pluginActive": "Plugin activ",
+        "pluginMissing": "Plugin lipsește",
         "remoteGps": "GPS Remote ",
         "startMinimized": "Pornește Minimizat",
         "stepExecutable": "Dacă plugin-ul lipsește, apăsați pe pictograma folderului și selectați folderul executabil al jocului:",
@@ -61,10 +65,39 @@
     "mobile": {
         "pairWithComputer": "Asociați cu Calculatorul"
     },
+    "maps": {
+        "defaultMap": "Hartă implicită",
+        "defaultMapDescription": "Harta standard a jocului (fără moduri)",
+        "download": "Descarcă",
+        "downloadBaseMap": "Descarcă harta de bază",
+        "inProgress": "În curs",
+        "mapMods": "Moduri de hartă",
+        "noModsAvailable": "Momentan nu sunt disponibile moduri pentru acest joc.",
+        "none": "Niciunul",
+        "pcCompanionNote": "Asigură-te că TruckNav PC Companion rulează înainte de descărcare",
+        "select": "Selectează",
+        "selectMapMod": "Selectează modul de hartă",
+        "selected": "Selectat",
+        "uninstallBaseMap": "Dezinstalează harta de bază"
+    },
     "notifications": {
         "locatingRoute": "Se găsește traseul",
         "noRouteAvailable": "Niciun traseu disponibil",
         "routeFound": "Traseu găsit"
+    },
+    "directions": {
+        "arrived": "Ai ajuns",
+        "exitAtRoundabout": "Ieși din sensul giratoriu",
+        "headOnRoute": "Urmează ruta",
+        "keepLeft": "Ține stânga",
+        "keepRight": "Ține dreapta",
+        "roundaboutExit1": "Ieșirea 1",
+        "roundaboutExit2": "Ieșirea 2",
+        "roundaboutExit3": "Ieșirea 3",
+        "roundaboutExitN": "Ieșirea {n}",
+        "takeTheExit": "Ia ieșirea",
+        "turnLeft": "Virează stânga",
+        "turnRight": "Virează dreapta"
     },
     "settings": {
         "appFont": "Fontul Aplicației",
@@ -105,7 +138,8 @@
         "german": "Germană",
         "slovak": "Slovacă",
         "romanian": "Română",
-        "korean": "Coreeană"
+        "korean": "Coreeană",
+        "spanish": "Spaniolă"
     },
     "uiComponents": {
         "fuelDescription": "Arată nivelul de combustibil rămas și notifică atunci când rămâne puțin.",

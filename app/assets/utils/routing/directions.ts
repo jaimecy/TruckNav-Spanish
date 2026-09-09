@@ -135,3 +135,40 @@ export function generateDirectionsList(
 
     return steps;
 }
+
+export function formatDirectionText(
+    step: DirectionStep,
+    t: (path: string) => string,
+): string {
+    switch (step.type) {
+        case "depart":
+            return t("directions.headOnRoute");
+        case "left":
+            return t("directions.turnLeft");
+        case "right":
+            return t("directions.turnRight");
+        case "slight-left":
+            return t("directions.keepLeft");
+        case "slight-right":
+            return t("directions.keepRight");
+        case "exit-highway":
+            return t("directions.takeTheExit");
+        case "destination":
+            return t("directions.arrived");
+        case "roundabout": {
+            const count = step.exitCount;
+            if (count && count > 0) {
+                if (count === 1) return t("directions.roundaboutExit1");
+                if (count === 2) return t("directions.roundaboutExit2");
+                if (count === 3) return t("directions.roundaboutExit3");
+                return t("directions.roundaboutExitN").replace(
+                    "{n}",
+                    String(count),
+                );
+            }
+            return t("directions.exitAtRoundabout");
+        }
+        default:
+            return step.text || t("map.followRoute");
+    }
+}

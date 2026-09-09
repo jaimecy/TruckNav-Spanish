@@ -1,5 +1,6 @@
 import de from "~/locales/de.json";
 import en from "~/locales/en.json";
+import es from "~/locales/es.json";
 import nl from "~/locales/nl.json";
 import cs from "~/locales/cs.json";
 import sk from "~/locales/sk.json";
@@ -10,6 +11,7 @@ type TranslationTree = typeof en;
 
 const dictionaries: Record<LocaleCode, TranslationTree> = {
     en,
+    es,
     de,
     nl,
     cs,

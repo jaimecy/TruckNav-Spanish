@@ -9,6 +9,7 @@ import {
     lightenColor,
 } from "~/assets/utils/shared/colors";
 import { generateTruckIcon } from "~/assets/utils/map/markers";
+import { formatDirectionText } from "~/assets/utils/routing/directions";
 
 defineProps<{ goHome: () => void }>();
 
@@ -516,7 +517,12 @@ const onCancelRoute = () => {
                         :upcoming-turns="fullRouteDirections"
                         :distance-to-next-turn="nextTurnDistance"
                         :next-instruction="
-                            fullRouteDirections[1]?.text || t('map.followRoute')
+                            fullRouteDirections[1]
+                                ? formatDirectionText(
+                                      fullRouteDirections[1],
+                                      t,
+                                  )
+                                : t('map.followRoute')
                         "
                     />
 

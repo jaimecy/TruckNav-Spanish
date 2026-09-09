@@ -14,6 +14,8 @@
         "loadingRouteData": "Loading Route Data...",
         "missing": "Missing",
         "note": "Note",
+        "warning": "Warning",
+        "caution": "Caution",
         "offlineTryAgain": "Offline, try opening again.",
         "reset": "Reset",
         "resume": "Resume",
@@ -31,6 +33,8 @@
         "localGps": "Local GPS",
         "minimize": "Minimize",
         "plugin": "Plugin",
+        "pluginActive": "Plugin Active",
+        "pluginMissing": "Plugin Missing",
         "remoteGps": "Remote GPS",
         "startMinimized": "Start minimized",
         "stepExecutable": "If the plugin is missing, click the folder icon and select the game's executable folder:",
@@ -61,10 +65,39 @@
     "mobile": {
         "pairWithComputer": "Pair with Computer"
     },
+    "maps": {
+        "defaultMap": "Default Map",
+        "defaultMapDescription": "Standard game map (No Mods)",
+        "download": "Download",
+        "downloadBaseMap": "Download Base Map",
+        "inProgress": "In Progress",
+        "mapMods": "Map Mods",
+        "noModsAvailable": "No mods are currently available for this game.",
+        "none": "None",
+        "pcCompanionNote": "Please make sure that TruckNav PC Companion is running before downloading",
+        "select": "Select",
+        "selectMapMod": "Select Map Mod",
+        "selected": "Selected",
+        "uninstallBaseMap": "Uninstall Base Map"
+    },
     "notifications": {
         "locatingRoute": "Locating Route",
         "noRouteAvailable": "No Route Available",
         "routeFound": "Route Found"
+    },
+    "directions": {
+        "arrived": "Arrived",
+        "exitAtRoundabout": "Exit at the roundabout",
+        "headOnRoute": "Head on Route",
+        "keepLeft": "Keep left",
+        "keepRight": "Keep right",
+        "roundaboutExit1": "1st exit",
+        "roundaboutExit2": "2nd exit",
+        "roundaboutExit3": "3rd exit",
+        "roundaboutExitN": "{n}th exit",
+        "takeTheExit": "Take the exit",
+        "turnLeft": "Turn left",
+        "turnRight": "Turn right"
     },
     "settings": {
         "appFont": "App Font",
@@ -105,7 +138,8 @@
         "german": "German",
         "slovak": "Slovak",
         "romanian": "Romanian",
-        "korean": "Korean"
+        "korean": "Korean",
+        "spanish": "Spanish"
     },
     "uiComponents": {
         "fuelDescription": "Shows your remaining fuel level and it pulses when running low.",

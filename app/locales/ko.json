@@ -14,6 +14,8 @@
         "loadingRouteData": "경로 데이터를 불러오는 중...",
         "missing": "찾을 수 없음",
         "note": "메모",
+        "warning": "경고",
+        "caution": "주의",
         "offlineTryAgain": "오프라인, 다시 실행해 주세요.",
         "reset": "초기화",
         "resume": "재개",
@@ -31,6 +33,8 @@
         "localGps": "내부 GPS",
         "minimize": "최소화",
         "plugin": "플러그인",
+        "pluginActive": "플러그인 활성",
+        "pluginMissing": "플러그인 없음",
         "remoteGps": "외부 GPS",
         "startMinimized": "시작 시 최소화",
         "stepExecutable": "플러그인을 찾을 수 없을 경우 폴더 아이콘을 클릭해 게임 실행 파일이 있는 폴더를 선택해 주세요:",
@@ -61,10 +65,39 @@
     "mobile": {
         "pairWithComputer": "컴퓨터와 연결"
     },
+    "maps": {
+        "defaultMap": "기본 맵",
+        "defaultMapDescription": "기본 게임 맵 (모드 없음)",
+        "download": "다운로드",
+        "downloadBaseMap": "기본 맵 다운로드",
+        "inProgress": "진행 중",
+        "mapMods": "맵 모드",
+        "noModsAvailable": "이 게임에 사용 가능한 모드가 없습니다.",
+        "none": "없음",
+        "pcCompanionNote": "다운로드하기 전에 TruckNav PC Companion이 실행 중인지 확인하세요",
+        "select": "선택",
+        "selectMapMod": "맵 모드 선택",
+        "selected": "선택됨",
+        "uninstallBaseMap": "기본 맵 제거"
+    },
     "notifications": {
         "locatingRoute": "경로 탐색 중",
         "noRouteAvailable": "사용 가능한 경로가 없음",
         "routeFound": "경로 탐색"
+    },
+    "directions": {
+        "arrived": "도착했습니다",
+        "exitAtRoundabout": "로터리에서 나가세요",
+        "headOnRoute": "경로를 따라가세요",
+        "keepLeft": "왼쪽 유지",
+        "keepRight": "오른쪽 유지",
+        "roundaboutExit1": "1번 출구",
+        "roundaboutExit2": "2번 출구",
+        "roundaboutExit3": "3번 출구",
+        "roundaboutExitN": "{n}번 출구",
+        "takeTheExit": "출구로 나가세요",
+        "turnLeft": "좌회전",
+        "turnRight": "우회전"
     },
     "settings": {
         "appFont": "앱 글꼴",
@@ -105,7 +138,8 @@
         "german": "독일어",
         "slovak": "슬로바키아어",
         "romanian": "루마니아어",
-        "korean": "한국어"
+        "korean": "한국어",
+        "spanish": "스페인어"
     },
     "uiComponents": {
         "fuelDescription": "남은 연료량을 표시하며, 연료가 부족하면 깜빡입니다.",

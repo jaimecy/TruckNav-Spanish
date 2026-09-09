@@ -14,6 +14,8 @@
         "loadingRouteData": "Routendaten werden geladen...",
         "missing": "Fehlt",
         "note": "Hinweis",
+        "warning": "Warnung",
+        "caution": "Vorsicht",
         "offlineTryAgain": "Offline, versuche es erneut zu öffnen.",
         "reset": "Zurücksetzen",
         "resume": "Fortsetzen",
@@ -31,6 +33,8 @@
         "localGps": "Lokales GPS",
         "minimize": "Minimiere",
         "plugin": "Plugin",
+        "pluginActive": "Plugin aktiv",
+        "pluginMissing": "Plugin fehlt",
         "remoteGps": "Remote GPS",
         "startMinimized": "Minimiert starten",
         "stepExecutable": "Falls das Plugin fehlt, klicke auf das Ordner-Symbol und wähle den ausführbaren Spielordner aus:",
@@ -61,10 +65,39 @@
     "mobile": {
         "pairWithComputer": "Mit Computer koppeln"
     },
+    "maps": {
+        "defaultMap": "Standardkarte",
+        "defaultMapDescription": "Standard-Spielkarte (ohne Mods)",
+        "download": "Herunterladen",
+        "downloadBaseMap": "Basiskarte herunterladen",
+        "inProgress": "In Bearbeitung",
+        "mapMods": "Karten-Mods",
+        "noModsAvailable": "Für dieses Spiel sind derzeit keine Mods verfügbar.",
+        "none": "Keine",
+        "pcCompanionNote": "Stelle sicher, dass TruckNav PC Companion läuft, bevor du herunterlädst",
+        "select": "Auswählen",
+        "selectMapMod": "Karten-Mod wählen",
+        "selected": "Ausgewählt",
+        "uninstallBaseMap": "Basiskarte deinstallieren"
+    },
     "notifications": {
         "locatingRoute": "Route wird gesucht",
         "noRouteAvailable": "Keine Route verfügbar",
         "routeFound": "Route gefunden"
+    },
+    "directions": {
+        "arrived": "Ziel erreicht",
+        "exitAtRoundabout": "Am Kreisverkehr ausfahren",
+        "headOnRoute": "Der Route folgen",
+        "keepLeft": "Links halten",
+        "keepRight": "Rechts halten",
+        "roundaboutExit1": "1. Ausfahrt",
+        "roundaboutExit2": "2. Ausfahrt",
+        "roundaboutExit3": "3. Ausfahrt",
+        "roundaboutExitN": "{n}. Ausfahrt",
+        "takeTheExit": "Ausfahrt nehmen",
+        "turnLeft": "Links abbiegen",
+        "turnRight": "Rechts abbiegen"
     },
     "settings": {
         "appFont": "App Schriftart",
@@ -105,7 +138,8 @@
         "german": "Deutsch",
         "slovak": "Slowakisch",
         "romanian": "Rumänisch",
-        "korean": "Koreanisch"
+        "korean": "Koreanisch",
+        "spanish": "Spanisch"
     },
     "uiComponents": {
         "fuelDescription": "Zeigt deinen verbleibenden Kraftstoff an und pulsiert bei niedrigem Stand.",

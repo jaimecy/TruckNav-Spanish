@@ -14,6 +14,8 @@
         "loadingRouteData": "Routegegevens laden...",
         "missing": "Ontbreekt",
         "note": "Opmerking",
+        "warning": "Waarschuwing",
+        "caution": "Let op",
         "offlineTryAgain": "Offline, probeer opnieuw te openen.",
         "reset": "Resetten",
         "resume": "Hervatten",
@@ -31,6 +33,8 @@
         "localGps": "Lokale GPS",
         "minimize": "Minimaliseren",
         "plugin": "Plugin",
+        "pluginActive": "Plugin actief",
+        "pluginMissing": "Plugin ontbreekt",
         "remoteGps": "Externe GPS",
         "startMinimized": "Geminimaliseerd starten",
         "stepExecutable": "Als de plugin ontbreekt, klik op het map-icoon en selecteer de uitvoerbare map van de game:",
@@ -61,10 +65,39 @@
     "mobile": {
         "pairWithComputer": "Koppelen met computer"
     },
+    "maps": {
+        "defaultMap": "Standaardkaart",
+        "defaultMapDescription": "Standaard spelkaart (geen mods)",
+        "download": "Downloaden",
+        "downloadBaseMap": "Basiskaart downloaden",
+        "inProgress": "Bezig",
+        "mapMods": "Kaartmods",
+        "noModsAvailable": "Er zijn momenteel geen mods beschikbaar voor dit spel.",
+        "none": "Geen",
+        "pcCompanionNote": "Zorg dat TruckNav PC Companion actief is voordat je downloadt",
+        "select": "Selecteren",
+        "selectMapMod": "Kaartmod selecteren",
+        "selected": "Geselecteerd",
+        "uninstallBaseMap": "Basiskaart verwijderen"
+    },
     "notifications": {
         "locatingRoute": "Route zoeken",
         "noRouteAvailable": "Geen route beschikbaar",
         "routeFound": "Route gevonden"
+    },
+    "directions": {
+        "arrived": "Bestemming bereikt",
+        "exitAtRoundabout": "Verlaat de rotonde",
+        "headOnRoute": "Volg de route",
+        "keepLeft": "Links aanhouden",
+        "keepRight": "Rechts aanhouden",
+        "roundaboutExit1": "1e afrit",
+        "roundaboutExit2": "2e afrit",
+        "roundaboutExit3": "3e afrit",
+        "roundaboutExitN": "{n}e afrit",
+        "takeTheExit": "Neem de afrit",
+        "turnLeft": "Sla linksaf",
+        "turnRight": "Sla rechtsaf"
     },
     "settings": {
         "appFont": "App-lettertype",
@@ -105,7 +138,8 @@
         "german": "Duits",
         "slovak": "Slowaaks",
         "romanian": "Roemeens",
-        "korean": "Koreaans"
+        "korean": "Koreaans",
+        "spanish": "Spaans"
     },
     "uiComponents": {
         "fuelDescription": "Toont je resterende brandstofniveau en pulseert wanneer het laag is.",

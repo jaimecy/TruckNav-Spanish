@@ -10,7 +10,7 @@ export type UiComponent =
     | "speedLimit"
     | "topBar";
 export type ActiveComponents = UiComponent[];
-export type LocaleCode = "en" | "de" | "nl" | "cs" | "sk" | "ko" | "ro";
+export type LocaleCode = "en" | "de" | "nl" | "cs" | "sk" | "ko" | "ro" | "es";
 
 export interface GameProfile {
     themeColor: string;
@@ -84,7 +84,7 @@ const DEFAULT_SETTINGS: AppSettingsState = {
         "sleep",
         "topBar",
     ],
-    locale: "en",
+    locale: "es",
 };
 
 const STORAGE_KEY = "truck-nav-settings";

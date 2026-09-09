@@ -14,6 +14,8 @@
         "loadingRouteData": "Hľadanie dát trasy...",
         "missing": "Chýba",
         "note": "Poznámka",
+        "warning": "Varovanie",
+        "caution": "Upozornenie",
         "offlineTryAgain": "Offline, skús to znova.",
         "reset": "Resetovať",
         "resume": "Pokračovať",
@@ -31,6 +33,8 @@
         "localGps": "Lokálná GPS",
         "minimize": "Minimalizovať",
         "plugin": "Plugin",
+        "pluginActive": "Plugin aktívny",
+        "pluginMissing": "Plugin chýba",
         "remoteGps": "Vzdialená GPS",
         "startMinimized": "Začať v minimalizovanom režime",
         "stepExecutable": "Ak plugin chýba, klikni na ikonu zložky a vyber umiestnenie inštalácie hry:",
@@ -61,10 +65,39 @@
     "mobile": {
         "pairWithComputer": "Spárovať s počítačom"
     },
+    "maps": {
+        "defaultMap": "Predvolená mapa",
+        "defaultMapDescription": "Štandardná herná mapa (bez modov)",
+        "download": "Stiahnuť",
+        "downloadBaseMap": "Stiahnuť základnú mapu",
+        "inProgress": "Prebieha",
+        "mapMods": "Mody máp",
+        "noModsAvailable": "Pre túto hru momentálne nie sú k dispozícii žiadne mody.",
+        "none": "Žiadny",
+        "pcCompanionNote": "Pred stiahnutím sa uistite, že beží TruckNav PC Companion",
+        "select": "Vybrať",
+        "selectMapMod": "Vybrať mód mapy",
+        "selected": "Vybrané",
+        "uninstallBaseMap": "Odinštalovať základnú mapu"
+    },
     "notifications": {
         "locatingRoute": "Hľadanie trasy",
         "noRouteAvailable": "Žiadna dostupná trasa!",
         "routeFound": "Trasa nájdená"
+    },
+    "directions": {
+        "arrived": "Ste v cieli",
+        "exitAtRoundabout": "Zíďte z kruhového objazdu",
+        "headOnRoute": "Pokračujte po trase",
+        "keepLeft": "Držte sa vľavo",
+        "keepRight": "Držte sa vpravo",
+        "roundaboutExit1": "1. výjazd",
+        "roundaboutExit2": "2. výjazd",
+        "roundaboutExit3": "3. výjazd",
+        "roundaboutExitN": "{n}. výjazd",
+        "takeTheExit": "Zíďte",
+        "turnLeft": "Odbočte vľavo",
+        "turnRight": "Odbočte vpravo"
     },
     "settings": {
         "appFont": "Font aplikácie",
@@ -105,7 +138,8 @@
         "german": "Nemčina",
         "slovak": "Slovenčina",
         "romanian": "Rumunčina",
-        "korean": "Kórejčina"
+        "korean": "Kórejčina",
+        "spanish": "Španielčina"
     },
     "uiComponents": {
         "fuelDescription": "Ukáže zostávajúce palivo a pulzuje, keď dochádza.",

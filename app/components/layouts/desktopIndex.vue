@@ -142,8 +142,8 @@ const toggleRemoteGpsWindow = () => {
                             t("desktop.launchStartup")
                         }}</span>
                         <SegmentedControl
-                            left-option="On"
-                            right-option="Off"
+                            :left-option="t('settings.on')"
+                            :right-option="t('settings.off')"
                             @connect="
                                 updateDesktopSetting(
                                     'startWithWindows',
@@ -160,8 +160,8 @@ const toggleRemoteGpsWindow = () => {
                             t("desktop.startMinimized")
                         }}</span>
                         <SegmentedControl
-                            left-option="On"
-                            right-option="Off"
+                            :left-option="t('settings.on')"
+                            :right-option="t('settings.off')"
                             @connect="
                                 updateDesktopSetting(
                                     'startMinimized',
@@ -219,14 +219,11 @@ const toggleRemoteGpsWindow = () => {
                             class="label"
                             :class="etsActive ? 'active' : 'missing'"
                         >
-                            <span
-                                >{{ t("desktop.plugin") }}
-                                {{
-                                    etsActive
-                                        ? t("common.active")
-                                        : t("common.missing")
-                                }}</span
-                            >
+                            <span>{{
+                                etsActive
+                                    ? t("desktop.pluginActive")
+                                    : t("desktop.pluginMissing")
+                            }}</span>
                             <button
                                 @click.prevent="handleExplorerLaunch('ETS2')"
                                 class="folder-btn"
@@ -244,14 +241,11 @@ const toggleRemoteGpsWindow = () => {
                             class="label"
                             :class="atsActive ? 'active' : 'missing'"
                         >
-                            <span
-                                >{{ t("desktop.plugin") }}
-                                {{
-                                    atsActive
-                                        ? t("common.active")
-                                        : t("common.missing")
-                                }}</span
-                            >
+                            <span>{{
+                                atsActive
+                                    ? t("desktop.pluginActive")
+                                    : t("desktop.pluginMissing")
+                            }}</span>
                             <button
                                 @click.prevent="handleExplorerLaunch('ATS')"
                                 class="folder-btn"
@@ -290,10 +284,7 @@ const toggleRemoteGpsWindow = () => {
 
         <div class="troubleshoot">
             <InfoBox type="note">
-                <template #content
-                    >If you're using a cracked version or a repack, the plugin
-                    may show as 'Missing' even after setup
-                </template>
+                <template #content>{{ t("desktop.troubleshoot") }}</template>
             </InfoBox>
         </div>
     </section>

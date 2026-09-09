@@ -22,6 +22,7 @@ const selectedExpansion = computed(() => {
 });
 
 const languageItems = computed(() => [
+    { label: t("languages.spanish"), value: "es" as LocaleCode },
     { label: t("languages.english"), value: "en" as LocaleCode },
     { label: t("languages.german"), value: "de" as LocaleCode },
     { label: t("languages.dutch"), value: "nl" as LocaleCode },
