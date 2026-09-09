@@ -296,6 +296,13 @@ watch(
 );
 
 watch(
+    () => settings.value.uiFontScale,
+    (fontScale) => {
+        applyMapLabelFontScale(map.value, (fontScale ?? 100) / 100);
+    },
+);
+
+watch(
     () => settings.value.locale,
     (locale) => {
         if (!map.value) return;

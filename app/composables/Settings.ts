@@ -37,6 +37,7 @@ export interface AppSettingsState {
     hudBtnSize: number;
     truckMarkerSize: number;
     compactTripFontSize: number;
+    uiFontScale: number;
     activeUiComponents: ActiveComponents;
     locale: LocaleCode;
 }
@@ -76,6 +77,7 @@ const DEFAULT_SETTINGS: AppSettingsState = {
     hudBtnSize: 30,
     truckMarkerSize: 40,
     compactTripFontSize: 1.8,
+    uiFontScale: 100,
     activeUiComponents: [
         "speed",
         "speedLimit",
@@ -88,6 +90,7 @@ const DEFAULT_SETTINGS: AppSettingsState = {
 };
 
 const STORAGE_KEY = "truck-nav-settings";
+const SPANISH_DEFAULT_APPLIED_KEY = "truck-nav-spanish-locale-applied";
 
 export const useSettings = () => {
     const settings = useState<AppSettingsState>("app-settings", () => ({
@@ -127,11 +130,18 @@ export const useSettings = () => {
             `${settings.value.compactTripFontSize}rem`,
         );
 
+        const fontScale = (settings.value.uiFontScale ?? 100) / 100;
+
+        document.documentElement.style.setProperty(
+            "--ui-font-scale",
+            String(fontScale),
+        );
+
         document.documentElement.style.setProperty(
             "--top-bar-height",
             !settings.value.activeUiComponents.includes("topBar")
                 ? "0px"
-                : "40px",
+                : `${Math.round(40 * fontScale)}px`,
         );
     };
 
@@ -165,6 +175,17 @@ export const useSettings = () => {
                 const parsed = JSON.parse(savedString);
                 settings.value = { ...DEFAULT_SETTINGS, ...parsed };
 
+                if (typeof settings.value.uiFontScale !== "number") {
+                    settings.value.uiFontScale = DEFAULT_SETTINGS.uiFontScale;
+                } else if (
+                    settings.value.uiFontScale > 0 &&
+                    settings.value.uiFontScale <= 1.6
+                ) {
+                    settings.value.uiFontScale = Math.round(
+                        settings.value.uiFontScale * 100,
+                    );
+                }
+
                 settings.value.profiles = {
                     ets2: {
                         ...DEFAULT_SETTINGS.profiles.ets2,
@@ -187,6 +208,15 @@ export const useSettings = () => {
             }
         } else {
             settings.value = { ...DEFAULT_SETTINGS };
+        }
+
+        // Old visits (or the official English app) store locale "en".
+        // Apply Spanish once so this fork opens in Spanish without wiping other settings.
+        if (localStorage.getItem(SPANISH_DEFAULT_APPLIED_KEY) !== "1") {
+            settings.value.locale = "es";
+            localStorage.setItem(SPANISH_DEFAULT_APPLIED_KEY, "1");
+            saveSettings();
+            return;
         }
 
         applySideEffects();
@@ -223,6 +253,7 @@ export const useSettings = () => {
         settings.value.truckMarkerSize = DEFAULT_SETTINGS.truckMarkerSize;
         settings.value.compactTripFontSize =
             DEFAULT_SETTINGS.compactTripFontSize;
+        settings.value.uiFontScale = DEFAULT_SETTINGS.uiFontScale;
 
         settings.value.activeUiComponents = [
             ...DEFAULT_SETTINGS.activeUiComponents,

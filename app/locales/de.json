@@ -101,6 +101,7 @@
     },
     "settings": {
         "appFont": "App Schriftart",
+        "uiFontSize": "Schriftgröße",
         "appearance": "Aussehen",
         "background": "Hintergrund",
         "land": "Land",

@@ -101,6 +101,7 @@
     },
     "settings": {
         "appFont": "Fontul Aplicației",
+        "uiFontSize": "Dimensiunea fontului",
         "appearance": "Aspect",
         "background": "Fundal",
         "land": "Pământ",

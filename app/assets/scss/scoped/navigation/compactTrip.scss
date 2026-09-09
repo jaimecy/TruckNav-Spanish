@@ -9,7 +9,7 @@
     display: flex;
     gap: 1.4rem;
 
-    font-size: var(--compact-trip-size);
+    font-size: calc(var(--compact-trip-size) * var(--ui-font-scale, 1));
     color: $white-font-text;
 
     border: 1.5px solid var(--theme-color);

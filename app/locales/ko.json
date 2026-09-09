@@ -101,6 +101,7 @@
     },
     "settings": {
         "appFont": "앱 글꼴",
+        "uiFontSize": "글꼴 크기",
         "appearance": "화면 설정",
         "background": "배경",
         "land": "대지",

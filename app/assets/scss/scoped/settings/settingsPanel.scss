@@ -175,6 +175,13 @@ $button-padding: 8px 10px;
     background-size: contain;
 }
 
+.ui-font-preview {
+    margin: 0;
+    font-size: ui-scale(1.8rem);
+    font-weight: 700;
+    color: $white-font-text;
+}
+
 /**
  * COLOR SETTINGS
  */

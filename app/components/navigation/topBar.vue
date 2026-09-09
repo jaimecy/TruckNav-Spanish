@@ -15,6 +15,10 @@ const { t } = useTranslations();
 const { kmToUserUnits, literToUserUnits, speedUnit, fuelUnit } =
     useUnitConversion();
 
+const hudIconSize = computed(() =>
+    Math.round(22 * ((settings.value.uiFontScale ?? 100) / 100)),
+);
+
 const truckSpeedConverted = computed(() => kmToUserUnits(props.truckSpeed));
 const fuelConverted = computed(() => literToUserUnits(props.fuel));
 </script>
@@ -41,7 +45,7 @@ const fuelConverted = computed(() => literToUserUnits(props.fuel));
                     <Icon
                         name="lucide:fuel"
                         :class="{ 'pulse-red': fuel < 100 }"
-                        size="22"
+                        :size="hudIconSize"
                     />
                     <p>
                         {{ fuelConverted
@@ -56,7 +60,7 @@ const fuelConverted = computed(() => literToUserUnits(props.fuel));
                     <Icon
                         name="lucide:bed-double"
                         class="sleep-icon"
-                        size="22"
+                        :size="hudIconSize"
                         :class="{ 'pulse-blue': restStopMinutes < 90 }"
                     />
                     <p>{{ restStopTime }}</p>

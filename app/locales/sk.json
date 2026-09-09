@@ -101,6 +101,7 @@
     },
     "settings": {
         "appFont": "Font aplikácie",
+        "uiFontSize": "Veľkosť písma",
         "appearance": "Vzhľad",
         "background": "Pozadia",
         "land": "Zem",

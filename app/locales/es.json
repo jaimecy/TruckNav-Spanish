@@ -104,6 +104,7 @@
     },
     "settings": {
         "appFont": "Fuente de la app",
+        "uiFontSize": "Tamaño de fuente",
         "appearance": "Apariencia",
         "background": "Fondo",
         "land": "Tierra",

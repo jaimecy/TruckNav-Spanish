@@ -20,6 +20,10 @@ $ets2-color: #fbc02d;
 
 $game-info-bar-height: var(--top-bar-height);
 
+@function ui-scale($size) {
+    @return calc(#{$size} * var(--ui-font-scale, 1));
+}
+
 $expanded-sheet-height: 215px;
 $collapsed-sheet-height: 90px;
 $notification-height: 20px;

@@ -11,7 +11,7 @@
     color: $white-font-text;
 
     width: 53%;
-    height: 90px;
+    height: ui-scale(90px);
 
     background-color: rgb(38, 52, 68, 0.95);
     border: 1px solid $secondaryColor;
@@ -19,7 +19,7 @@
 
     backdrop-filter: blur(2px);
 
-    font-size: 1.7rem;
+    font-size: ui-scale(1.7rem);
 
     @media (orientation: landscape) {
         width: 30%;
@@ -46,8 +46,8 @@
 }
 
 .direction-arrow {
-    width: 32px;
-    height: 32px;
+    width: ui-scale(32px);
+    height: ui-scale(32px);
 }
 
 .turn-info {

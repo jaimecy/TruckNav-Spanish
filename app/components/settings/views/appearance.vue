@@ -149,6 +149,27 @@ watch(() => activeSettings.value.themeColor, updatePreviewIcon, {
         <div class="small-separator"></div>
 
         <IncreaseOption
+            :option-title="t('settings.uiFontSize')"
+            setting-name="uiFontScale"
+            :max-value="160"
+            :min-value="50"
+            :amount="5"
+            suffix="%"
+        >
+            <template #icon>
+                <Icon name="lucide:baseline" size="24" />
+            </template>
+        </IncreaseOption>
+
+        <PreviewSetting :height="70">
+            <p class="ui-font-preview">
+                90 km/h · 10.5 km {{ t("map.takeTheExit") }}
+            </p>
+        </PreviewSetting>
+
+        <div class="small-separator"></div>
+
+        <IncreaseOption
             :option-title="t('settings.hudButtonSize')"
             setting-name="hudBtnSize"
             :max-value="40"

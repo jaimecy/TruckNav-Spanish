@@ -101,6 +101,7 @@
     },
     "settings": {
         "appFont": "Font aplikace",
+        "uiFontSize": "Velikost písma",
         "appearance": "Vzhled",
         "background": "Pozadí",
         "land": "Země",

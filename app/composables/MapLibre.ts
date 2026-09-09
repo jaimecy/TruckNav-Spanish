@@ -9,10 +9,39 @@ import { getMapFileUrl } from "~/assets/utils/shared/fileManager";
 import { getActiveMapFolder } from "~/assets/utils/map/helpers";
 import { localizedMapTextField } from "~/assets/utils/map/localizedLabels";
 
+export const MAP_LABEL_TEXT_SIZES = {
+    "village-labels": 13,
+    "city-labels": 15,
+    "capital-major-labels": 18,
+    "country-labels": 20,
+} as const;
+
+export function scaledMapTextSize(baseSize: number, fontScale = 1) {
+    return Math.max(8, Math.round(baseSize * fontScale));
+}
+
+export function applyMapLabelFontScale(
+    map: MapLibreGl | null,
+    fontScale = 1,
+) {
+    if (!map) return;
+
+    for (const [layerId, baseSize] of Object.entries(MAP_LABEL_TEXT_SIZES)) {
+        if (map.getLayer(layerId)) {
+            map.setLayoutProperty(
+                layerId,
+                "text-size",
+                scaledMapTextSize(baseSize, fontScale),
+            );
+        }
+    }
+}
+
 export async function initializeMap(
     container: HTMLElement,
 ): Promise<MapLibreGl> {
     const { settings, activeSettings } = useSettings();
+    const fontScale = (settings.value.uiFontScale ?? 100) / 100;
 
     const baseUrl = window.location.origin;
 
@@ -322,7 +351,7 @@ export async function initializeMap(
                 "text-font": [
                     activeSettings.value.fontFamily || "Commissioner",
                 ],
-                "text-size": 13,
+                "text-size": scaledMapTextSize(13, fontScale),
                 "text-anchor": "center",
                 "text-offset": [0, 0],
                 "text-allow-overlap": true,
@@ -421,7 +450,7 @@ export async function initializeMap(
                 "text-font": [
                     activeSettings.value.fontFamily || "Commissioner",
                 ],
-                "text-size": 15,
+                "text-size": scaledMapTextSize(15, fontScale),
                 "text-anchor": "bottom",
                 "text-offset": [0, -0.3],
                 "text-allow-overlap": true,
@@ -446,7 +475,7 @@ export async function initializeMap(
             "source-layer": "cities",
             layout: {
                 "text-field": localizedMapTextField(settings.value.locale),
-                "text-size": 18,
+                "text-size": scaledMapTextSize(18, fontScale),
                 "text-font": [
                     activeSettings.value.fontFamily || "Commissioner",
                 ],
@@ -472,7 +501,7 @@ export async function initializeMap(
             "source-layer": "countrynames",
             layout: {
                 "text-field": localizedMapTextField(settings.value.locale),
-                "text-size": 20,
+                "text-size": scaledMapTextSize(20, fontScale),
                 "text-font": [
                     activeSettings.value.fontFamily || "Commissioner",
                 ],

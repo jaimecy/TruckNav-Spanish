@@ -14,6 +14,7 @@ const props = defineProps<{
     minValue: number;
 
     amount: number;
+    suffix?: string;
 }>();
 
 const currentSize = computed(() => settings.value[props.settingName]);
@@ -77,7 +78,7 @@ function stopHold() {
             </button>
 
             <div>
-                <span>{{ currentSize }}</span>
+                <span>{{ currentSize }}{{ suffix }}</span>
             </div>
 
             <button

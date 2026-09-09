@@ -74,7 +74,7 @@ $compact-bar-height: 35px;
 
 .dest-name {
     margin: 0;
-    font-size: 2rem;
+    font-size: ui-scale(2rem);
     font-weight: 700;
     color: $white-font-text;
 }
@@ -161,13 +161,13 @@ $compact-bar-height: 35px;
         }
 
         .value {
-            font-size: 1.9rem;
+            font-size: ui-scale(1.9rem);
             font-weight: 700;
             color: $white-font-text;
         }
 
         .label {
-            font-size: 1.3rem;
+            font-size: ui-scale(1.3rem);
             color: rgba(255, 255, 255, 0.5);
         }
     }
