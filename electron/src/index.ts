@@ -53,7 +53,7 @@ unhandled();
 // Define our menu templates (these are optional)
 const trayMenuTemplate: (MenuItemConstructorOptions | MenuItem)[] = [
     new MenuItem({
-        label: "Show App",
+        label: "Mostrar aplicación",
         click: () => {
             forceKeepHidden = false;
             const win = myCapacitorApp.getMainWindow();
@@ -65,7 +65,7 @@ const trayMenuTemplate: (MenuItemConstructorOptions | MenuItem)[] = [
         },
     }),
     new MenuItem({ type: "separator" }),
-    new MenuItem({ label: "Quit App", role: "quit" }),
+    new MenuItem({ label: "Salir", role: "quit" }),
 ];
 
 // Get Config options from capacitor.config
