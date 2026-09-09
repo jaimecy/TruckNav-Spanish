@@ -6,6 +6,7 @@ import {
 } from "~/assets/utils/shared/colors";
 import { BlobSource } from "~/assets/utils/shared/BlobSource";
 import { getMapFileUrl } from "~/assets/utils/shared/fileManager";
+import { getActiveMapFolder } from "~/assets/utils/map/helpers";
 import { localizedMapTextField } from "~/assets/utils/map/localizedLabels";
 
 export async function initializeMap(
@@ -157,6 +158,7 @@ export async function initializeMap(
     //// =================> LATER ATS UPDATE <=================
 
     map.on("load", async () => {
+        try {
         map.addSource("all-data", {
             type: "vector",
             url: "pmtiles://all-data",
@@ -487,6 +489,9 @@ export async function initializeMap(
             minzoom: 5,
             maxzoom: 6,
         });
+        } catch (error) {
+            console.error("Error adding map layers:", error);
+        }
     });
 
     return map;

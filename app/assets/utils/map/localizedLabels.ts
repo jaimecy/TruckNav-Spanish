@@ -21,9 +21,13 @@ export function localizeCountryToken(token: string, locale: string): string {
 
 export function localizedMapTextField(locale: string) {
     if (locale !== "es") {
-        return ["get", "name"] as const;
+        return ["get", "name"];
     }
 
-    const entries = Object.entries(SPANISH_MAP_LABELS).flat();
-    return ["match", ["get", "name"], ...entries, ["get", "name"]];
+    const expression: unknown[] = ["case"];
+    for (const [englishName, spanishName] of Object.entries(SPANISH_MAP_LABELS)) {
+        expression.push(["==", ["get", "name"], englishName], spanishName);
+    }
+    expression.push(["get", "name"]);
+    return expression;
 }

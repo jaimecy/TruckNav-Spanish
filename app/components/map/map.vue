@@ -356,16 +356,17 @@ onMounted(async () => {
     }
 
     try {
-        const mapInstance = await initializeMap(mapEl.value);
+        const graphPromise = initializeGraphData();
+        const [mapInstance, initialTruckImg] = await Promise.all([
+            initializeMap(mapEl.value),
+            generateTruckIcon(activeSettings.value.themeColor),
+        ]);
         map.value = markRaw(mapInstance);
         if (!map.value) return;
 
-        const initialTruckImg = await generateTruckIcon(
-            activeSettings.value.themeColor,
-        );
-        map.value.on("load", async () => {
+        const onMapReady = async () => {
             initMarker(initialTruckImg.src, settings.value.truckMarkerSize);
-            const graphData = await initializeGraphData();
+            const graphData = await graphPromise;
             if (!graphData) return;
 
             const { nodes, graphBuffer, geometryBuffer } = graphData;
@@ -375,7 +376,15 @@ onMounted(async () => {
 
             setupRouteLayer();
             initCameraListeners();
-        });
+        };
+
+        if (map.value.loaded()) {
+            void onMapReady();
+        } else {
+            map.value.once("load", () => {
+                void onMapReady();
+            });
+        }
 
         map.value.on("click", async (e) => {
             const features = map.value!.queryRenderedFeatures(e.point, {
