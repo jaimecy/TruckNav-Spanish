@@ -1,6 +1,4 @@
 !macro customHeader
-  ; Override product branding in the installer UI only (app exe stays TruckNav).
-  Name "TruckNavSpanish"
   BrandingText "TruckNavSpanish ${VERSION}"
   !ifndef BUILD_UNINSTALLER
     Caption "Instalador de TruckNavSpanish"
