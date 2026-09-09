@@ -11,6 +11,7 @@
         "!public/debug-roadnetwork/europe-route-graph.geojson"
     ],
     "publish": null,
+    "afterPack": "./afterPack.js",
     "extraResources": [
         {
             "from": "bin",
@@ -31,8 +32,9 @@
     },
     "win": {
         "target": "nsis",
-        "icon": "assets/TruckNavIconOutline.png",
-        "signAndEditExecutable": false
+        "icon": "assets/TruckNavIconOutline.ico",
+        "signAndEditExecutable": false,
+        "verifyUpdateCodeSignature": false
     },
     "mac": {
         "category": "your.app.category.type",
