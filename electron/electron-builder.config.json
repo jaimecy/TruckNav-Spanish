@@ -1,7 +1,7 @@
 {
     "appId": "com.raresmuntean.trucknav",
     "productName": "TruckNavSpanish",
-    "executableName": "TruckNav",
+    "executableName": "TruckNavSpanish",
     "directories": {
         "buildResources": "resources"
     },

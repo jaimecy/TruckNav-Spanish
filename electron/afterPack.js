@@ -27,7 +27,7 @@ exports.default = async function afterPack(context) {
         return;
     }
 
-    const exeName = "TruckNav.exe";
+    const exeName = "TruckNavSpanish.exe";
     const exePath = path.join(context.appOutDir, exeName);
     const iconPath = path.join(
         context.packager.projectDir,
