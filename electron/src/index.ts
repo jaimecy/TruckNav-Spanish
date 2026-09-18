@@ -54,6 +54,8 @@ app.setAppUserModelId("com.raresmuntean.trucknav");
 app.setName("TruckNavSpanish");
 
 // Define our menu templates (these are optional)
+let alwaysOnTopMenuItem: MenuItem | null = null;
+
 const trayMenuTemplate: (MenuItemConstructorOptions | MenuItem)[] = [
     new MenuItem({
         label: "Mostrar aplicación",
@@ -67,6 +69,18 @@ const trayMenuTemplate: (MenuItemConstructorOptions | MenuItem)[] = [
             }
         },
     }),
+    new MenuItem({ type: "separator" }),
+    (alwaysOnTopMenuItem = new MenuItem({
+        label: "Siempre encima de otras ventanas",
+        type: "checkbox",
+        checked: appSettings.alwaysOnTop,
+        click: (item) => {
+            const updated = getSettings();
+            updated.alwaysOnTop = item.checked;
+            saveSettings(updated);
+            myCapacitorApp.getMainWindow()?.setAlwaysOnTop(item.checked);
+        },
+    })),
     new MenuItem({ type: "separator" }),
     new MenuItem({ label: "Salir", role: "quit" }),
 ];
@@ -520,6 +534,9 @@ ipcMain.handle(
 
         if (key === "alwaysOnTop") {
             myCapacitorApp.getMainWindow()?.setAlwaysOnTop(Boolean(value));
+            if (alwaysOnTopMenuItem) {
+                alwaysOnTopMenuItem.checked = Boolean(value);
+            }
         }
 
         if (key === "rpcEnabled") {
