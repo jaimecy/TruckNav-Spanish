@@ -67,12 +67,12 @@ function stopHold() {
         <div class="increase-option">
             <button
                 class="settings-btn default-color increase-decrease"
-                @click.prevent="updateSize('-')"
-                @mousedown="startHold('-')"
-                @mouseup="stopHold"
-                @mouseleave="stopHold"
-                @touchstart.prevent="startHold('-')"
-                @touchend="stopHold"
+                @pointerdown.prevent="startHold('-')"
+                @pointerup="stopHold"
+                @pointerleave="stopHold"
+                @pointercancel="stopHold"
+                @keydown.enter.prevent="updateSize('-')"
+                @keydown.space.prevent="updateSize('-')"
             >
                 <Icon name="lucide:minus" />
             </button>
@@ -83,12 +83,12 @@ function stopHold() {
 
             <button
                 class="settings-btn default-color increase-decrease"
-                @click.prevent="updateSize('+')"
-                @mousedown="startHold('+')"
-                @mouseup="stopHold"
-                @mouseleave="stopHold"
-                @touchstart.prevent="startHold('+')"
-                @touchend="stopHold"
+                @pointerdown.prevent="startHold('+')"
+                @pointerup="stopHold"
+                @pointerleave="stopHold"
+                @pointercancel="stopHold"
+                @keydown.enter.prevent="updateSize('+')"
+                @keydown.space.prevent="updateSize('+')"
             >
                 <Icon name="lucide:plus" />
             </button>

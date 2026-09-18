@@ -153,7 +153,7 @@ watch(() => activeSettings.value.themeColor, updatePreviewIcon, {
             setting-name="uiFontScale"
             :max-value="160"
             :min-value="50"
-            :amount="5"
+            :amount="1"
             suffix="%"
         >
             <template #icon>
