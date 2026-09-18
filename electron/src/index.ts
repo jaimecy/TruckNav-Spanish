@@ -156,7 +156,11 @@ if (!gotTheLock) {
                 await initDiscordRpc();
             }
 
-            await myCapacitorApp.init();
+await myCapacitorApp.init();
+
+            if (appSettings.alwaysOnTop) {
+                myCapacitorApp.getMainWindow()?.setAlwaysOnTop(true);
+            }
 
             const tray = (myCapacitorApp as any).TrayIcon;
 
@@ -512,6 +516,10 @@ ipcMain.handle(
                 path: app.getPath("exe"),
                 args: ["--hidden"],
             });
+        }
+
+        if (key === "alwaysOnTop") {
+            myCapacitorApp.getMainWindow()?.setAlwaysOnTop(Boolean(value));
         }
 
         if (key === "rpcEnabled") {

@@ -25,6 +25,7 @@
     },
     "desktop": {
         "app": "앱:",
+        "alwaysOnTop": "항상 위에 표시",
         "ats": "ATS",
         "browser": "브라우저",
         "discordRpc": "디스코드 RPC",

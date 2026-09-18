@@ -14,6 +14,7 @@ const atsActive = ref(false);
 
 const startWithWindows = computed(() => settings.value.startWithWindows);
 const startMinimized = computed(() => settings.value.startMinimized);
+const alwaysOnTop = computed(() => settings.value.alwaysOnTop);
 
 const checkStatus = async () => {
     isServerRunning.value = await isBridgeRunning("127.0.0.1");
@@ -170,6 +171,24 @@ const toggleRemoteGpsWindow = () => {
                             "
                             size="small"
                             :active="startMinimized"
+                        />
+                    </div>
+
+                    <div class="toggle-button">
+                        <span class="toggle-title">{{
+                            t("desktop.alwaysOnTop")
+                        }}</span>
+                        <SegmentedControl
+                            :left-option="t('settings.on')"
+                            :right-option="t('settings.off')"
+                            @connect="
+                                updateDesktopSetting(
+                                    'alwaysOnTop',
+                                    !alwaysOnTop,
+                                )
+                            "
+                            size="small"
+                            :active="alwaysOnTop"
                         />
                     </div>
                 </div>

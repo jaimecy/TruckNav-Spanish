@@ -25,6 +25,7 @@
     },
     "desktop": {
         "app": "Aplikace:",
+        "alwaysOnTop": "Vždy navrchu",
         "ats": "ATS",
         "browser": "Prohlížeč:",
         "discordRpc": "Discord RPC",

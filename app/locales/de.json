@@ -24,6 +24,7 @@
         "stop": "Stopp"
     },
     "desktop": {
+        "alwaysOnTop": "Immer im Vordergrund",
         "app": "App:",
         "ats": "ATS",
         "browser": "Browser",

@@ -25,6 +25,7 @@
     },
     "desktop": {
         "app": "Aplicație:",
+        "alwaysOnTop": "Mereu deasupra ferestrelor",
         "ats": "ATS",
         "browser": "Browser",
         "discordRpc": "Discord RPC",

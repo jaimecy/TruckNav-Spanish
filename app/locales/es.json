@@ -24,6 +24,7 @@
         "stop": "Detener"
     },
     "desktop": {
+        "alwaysOnTop": "Siempre encima de otras ventanas",
         "app": "App:",
         "ats": "ATS",
         "browser": "Navegador",
