@@ -78,7 +78,7 @@ const trayMenuTemplate: (MenuItemConstructorOptions | MenuItem)[] = [
             const updated = getSettings();
             updated.alwaysOnTop = item.checked;
             saveSettings(updated);
-            myCapacitorApp.getMainWindow()?.setAlwaysOnTop(item.checked);
+            myCapacitorApp.getMainWindow()?.setAlwaysOnTop(item.checked, "normal");
         },
     })),
     new MenuItem({ type: "separator" }),
@@ -176,7 +176,7 @@ if (!gotTheLock) {
 await myCapacitorApp.init();
 
             if (appSettings.alwaysOnTop) {
-                myCapacitorApp.getMainWindow()?.setAlwaysOnTop(true);
+                myCapacitorApp.getMainWindow()?.setAlwaysOnTop(true, "normal");
             }
 
             const tray = (myCapacitorApp as any).TrayIcon;
@@ -536,7 +536,7 @@ ipcMain.handle(
         }
 
         if (key === "alwaysOnTop") {
-            myCapacitorApp.getMainWindow()?.setAlwaysOnTop(Boolean(value));
+            myCapacitorApp.getMainWindow()?.setAlwaysOnTop(Boolean(value), "normal");
             if (alwaysOnTopMenuItem) {
                 alwaysOnTopMenuItem.checked = Boolean(value);
             }
