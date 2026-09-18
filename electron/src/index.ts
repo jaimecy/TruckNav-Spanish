@@ -50,6 +50,9 @@ let isQuittingForRpcCleanup = false;
 // Graceful handling of unhandled errors.
 unhandled();
 
+app.setAppUserModelId("com.raresmuntean.trucknav");
+app.setName("TruckNavSpanish");
+
 // Define our menu templates (these are optional)
 const trayMenuTemplate: (MenuItemConstructorOptions | MenuItem)[] = [
     new MenuItem({

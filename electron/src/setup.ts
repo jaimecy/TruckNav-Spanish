@@ -149,6 +149,7 @@ export class ElectronCapacitorApp {
         );
 
         this.MainWindow = new BrowserWindow({
+            title: "TruckNavSpanish",
             icon,
             show: false,
             x: this.mainWindowState.x,
@@ -165,6 +166,12 @@ export class ElectronCapacitorApp {
         this.mainWindowState.manage(this.MainWindow);
 
         const win = this.MainWindow; // Local reference for easier null checking
+
+        win.on("page-title-updated", (event) => {
+            event.preventDefault();
+            win.setTitle("TruckNavSpanish");
+        });
+        win.setTitle("TruckNavSpanish");
 
         if (this.CapacitorFileConfig.electron?.backgroundColor) {
             win.setBackgroundColor(

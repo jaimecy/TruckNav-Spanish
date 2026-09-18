@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const cp = require('child_process');
 const chokidar = require('chokidar');
-const electron = require('electron');
+const ensureDevExe = require('./ensure-dev-exe.cjs');
 
 let child = null;
 const npmCmd = process.platform === 'win32' ? 'npm.cmd' : 'npm';
@@ -32,7 +32,7 @@ async function spawnElectron() {
     child = null;
     await runBuild();
   }
-  child = cp.spawn(electron, ['--inspect=5858', './']);
+  child = cp.spawn(ensureDevExe(), ['--inspect=5858', './']);
   child.on('exit', () => {
     if (!reloadWatcher.restarting) {
       process.exit(0);
