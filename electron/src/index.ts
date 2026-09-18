@@ -137,6 +137,9 @@ app.on("browser-window-created", (_, window) => {
     });
 
     (window as any).on("minimize", (event: any) => {
+        if ((window as any).isAlwaysOnTop()) {
+            return;
+        }
         if (event && event.preventDefault) {
             event.preventDefault();
         }
